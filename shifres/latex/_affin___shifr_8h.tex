@@ -1,0 +1,107 @@
+\doxysection{Файл Affin\+\_\+\+Shifr.\+h}
+\hypertarget{_affin___shifr_8h}{}\label{_affin___shifr_8h}\index{Affin\_Shifr.h@{Affin\_Shifr.h}}
+
+
+Реализация аффинного шифра для криптографических операций  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$conio.\+h$>$}\newline
+{\ttfamily \#include $<$cctype$>$}\newline
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_affin___shifr_8h_a25a655de4313d9c920e73417933b7195}{mod\+\_\+inv}} (int a, int m)
+\begin{DoxyCompactList}\small\item\em Вычисляет модульную мультипликативную обратную величину \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{_affin___shifr_8h_a3f29b91a4833bca4f31dba8b48174a4c}{main\+\_\+\+Aff}} (string alphabet, string key, string text, int mod)
+\begin{DoxyCompactList}\small\item\em Основная функция для выполнения операций аффинного шифрования/расшифрования \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Реализация аффинного шифра для криптографических операций 
+
+Данный файл содержит функции для шифрования и расшифрования текста с использованием аффинного шифра с заданным алфавитом и ключами 
+
+\label{doc-func-members}
+\Hypertarget{_affin___shifr_8h_doc-func-members}
+\doxysubsection{Функции}
+\Hypertarget{_affin___shifr_8h_a3f29b91a4833bca4f31dba8b48174a4c}\index{Affin\_Shifr.h@{Affin\_Shifr.h}!main\_Aff@{main\_Aff}}
+\index{main\_Aff@{main\_Aff}!Affin\_Shifr.h@{Affin\_Shifr.h}}
+\doxysubsubsection{\texorpdfstring{main\_Aff()}{main\_Aff()}}
+{\footnotesize\ttfamily \label{_affin___shifr_8h_a3f29b91a4833bca4f31dba8b48174a4c} 
+string main\+\_\+\+Aff (\begin{DoxyParamCaption}\item[{string}]{alphabet}{, }\item[{string}]{key}{, }\item[{string}]{text}{, }\item[{int}]{mod}{}\end{DoxyParamCaption})}
+
+
+
+Основная функция для выполнения операций аффинного шифрования/расшифрования 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em alphabet} & Алфавит для криптографических операций \\
+\hline
+{\em key} & Строка с ключами шифрования (два числа через пробел\+: "{}a b"{}) \\
+\hline
+{\em text} & Текст для обработки (открытый или зашифрованный) \\
+\hline
+{\em mod} & Режим работы\+: 0 -\/ интерактивный, 1 -\/ шифрование, 2 -\/ расшифрование \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Результат криптографической операции (зашифрованный или расшифрованный текст)
+\end{DoxyReturn}
+Реализует аффинный шифр с формулами\+:
+\begin{DoxyItemize}
+\item Шифрование\+: E(x) = (a\texorpdfstring{$\ast$}{*}x + b) mod m
+\item Расшифрование\+: D(y) = ((y -\/ b) \texorpdfstring{$\ast$}{*} a\texorpdfstring{$^\wedge$}{\string^}(-\/1)) mod m где a, b -\/ ключи шифрования, m -\/ размер алфавита 
+\end{DoxyItemize}Локальная переменная для хранения введенного алфавита
+
+Размер алфавита (модуль для аффинного шифра)
+
+Локальная переменная для хранения введенного ключа
+
+Позиция пробела в строке ключа для разделения параметров a и b
+
+Первый ключ аффинного шифра (мультипликативный)
+
+Второй ключ аффинного шифра (аддитивный)
+
+Код нажатой клавиши для выбора операции
+
+Открытый текст для шифрования
+
+Результирующий зашифрованный текст
+
+Индекс символа в алфавите
+
+Индекс зашифрованного символа
+
+Зашифрованный текст для расшифрования
+
+Результирующий расшифрованный текст
+
+Модульная обратная величина ключа a
+
+Индекс зашифрованного символа в алфавите
+
+Индекс расшифрованного символа\Hypertarget{_affin___shifr_8h_a25a655de4313d9c920e73417933b7195}\index{Affin\_Shifr.h@{Affin\_Shifr.h}!mod\_inv@{mod\_inv}}
+\index{mod\_inv@{mod\_inv}!Affin\_Shifr.h@{Affin\_Shifr.h}}
+\doxysubsubsection{\texorpdfstring{mod\_inv()}{mod\_inv()}}
+{\footnotesize\ttfamily \label{_affin___shifr_8h_a25a655de4313d9c920e73417933b7195} 
+int mod\+\_\+inv (\begin{DoxyParamCaption}\item[{int}]{a}{, }\item[{int}]{m}{}\end{DoxyParamCaption})}
+
+
+
+Вычисляет модульную мультипликативную обратную величину 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em a} & Число, для которого ищется обратная величина \\
+\hline
+{\em m} & Модуль (основание модульной арифметики) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Модульная обратная величина числа a по модулю m
+\end{DoxyReturn}
+Использует простой алгоритм перебора для нахождения числа x, такого что (a \texorpdfstring{$\ast$}{*} x) ≡ 1 (mod m) 

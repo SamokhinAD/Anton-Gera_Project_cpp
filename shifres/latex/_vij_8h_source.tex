@@ -1,0 +1,114 @@
+\doxysection{Vij.\+h}
+\hypertarget{_vij_8h_source}{}\label{_vij_8h_source}\mbox{\hyperlink{_vij_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ VIJ\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ VIJ\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <conio.h>}\ \textcolor{comment}{//\ For\ \_kbhit()\ and\ \_getch()}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <cctype>}\ \ \ \ \textcolor{comment}{//\ Для\ tolower()}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespacestd}{std}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{_vij_8h_acfacfd0b609d3c2079cef31f6b58cc96}{main\_Vij}}(\textcolor{keywordtype}{string}\ alphabet,\ \textcolor{keywordtype}{string}\ key\_text,\ \textcolor{keywordtype}{string}\ text,\ \textcolor{keywordtype}{int}\ mod)\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ setlocale(LC\_ALL,\ \textcolor{stringliteral}{"{}en\_US.UTF-\/8"{}});}
+\DoxyCodeLine{00032\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nПравила\ выбора\ параметров\ для\ использования\ алгоритма:"{}}\ <<\ endl;}
+\DoxyCodeLine{00033\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}1.\ Алфавит\ может\ состоять\ из\ любого\ количества\ любых\ символов;"{}}\ <<\ endl;}
+\DoxyCodeLine{00034\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}2.\ Ключ\ составляется\ из\ символов\ веденного\ алфавита,\ его\ длина\ не\ должна\ превышать\ размеров\ будущего\ открытого\ текста;"{}}\ <<\ endl;}
+\DoxyCodeLine{00035\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}3.\ Открытый\ текст\ должен\ состоять\ ТОЛЬКО\ из\ символов\ введенного\ алфавита;"{}}\ <<\ endl;}
+\DoxyCodeLine{00036\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}4.\ При\ расшифровании\ используются\ те\ же\ параметры,\ что\ и\ при\ зашифровании."{}}\ <<\ endl;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nВведите\ алфавит\ для\ проведения\ криптографических\ операций:"{}}\ <<\ endl;}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{if}(alphabet\ ==\ \textcolor{stringliteral}{"{}-\/1"{}})}
+\DoxyCodeLine{00040\ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ alphabet;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ getline(cin,\ alphabet);}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ m\ =\ alphabet.length();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nВведите\ ключ\ шифрования:"{}}\ <<\ endl;}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{if}(key\_text\ ==\ \textcolor{stringliteral}{"{}-\/1"{}})}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ key\_text;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ getline(cin,\ key\_text);}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ len\_key\_text\ =\ key\_text.length();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nДля\ зашифрования\ нажмите\ -\/-\/>"{}}\ <<\ endl;}
+\DoxyCodeLine{00059\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Для\ расшифрования\ нажмите\ <-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_kbhit()\ ||\ mod\ !=\ 0)\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ arrow;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(mod\ ==\ 0)\{arrow\ =\ \_getch();\}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (arrow\ ==\ 77\ ||\ mod\ ==\ 1)\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nВведите\ открытый\ текст:"{}}\ <<\ endl;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ open\_text;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(text\ ==\ \textcolor{stringliteral}{"{}-\/1"{}})\{getline(cin,\ open\_text);\}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{open\_text\ =\ text;\}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&c\ :\ open\_text)\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c\ =\ tolower(c);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ len\_open\_text\ =\ open\_text.length();}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ gamma\_text;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ len\_open\_text\ /\ len\_key\_text;\ ++i)\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gamma\_text\ +=\ key\_text;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gamma\_text\ +=\ key\_text.substr(0,\ len\_open\_text\ \%\ len\_key\_text);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vector<int>\ shifr\_array(len\_open\_text);}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ len\_open\_text;\ ++i)\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ shifr\_array[i]\ =\ (alphabet.find(open\_text[i])\ +\ alphabet.find(gamma\_text[i]))\ \%\ m;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ shifr\_text\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ :\ shifr\_array)\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ shifr\_text\ +=\ alphabet[i];}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nШифртекст:"{}}\ <<\ endl;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ shifr\_text\ <<\ endl;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ shifr\_text;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (arrow\ ==\ 75\ ||\ mod\ ==\ 2)\ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nВведите\ шифртекст:"{}}\ <<\ endl;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ shifr\_text;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(text\ ==\ \textcolor{stringliteral}{"{}-\/1"{}})\{getline(cin,\ shifr\_text);\}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{shifr\_text\ =\ text;\}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ len\_shifr\_text\ =\ shifr\_text.length();}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ gamma\_text;}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ len\_shifr\_text\ /\ len\_key\_text;\ ++i)\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gamma\_text\ +=\ key\_text;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gamma\_text\ +=\ key\_text.substr(0,\ len\_shifr\_text\ \%\ len\_key\_text);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vector<int>\ open\_array(len\_shifr\_text);}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ len\_shifr\_text;\ ++i)\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ open\_array[i]\ =\ (alphabet.find(shifr\_text[i])\ -\/\ alphabet.find(gamma\_text[i])\ +\ m)\ \%\ m;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ open\_text;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ :\ open\_array)\ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ open\_text\ +=\ alphabet[i];}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nОткрытый\ текст:"{}}\ <<\ endl;}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ open\_text\ <<\ endl;}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ open\_text;}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00136\ \ \ \ \ \}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00139\ \}}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
