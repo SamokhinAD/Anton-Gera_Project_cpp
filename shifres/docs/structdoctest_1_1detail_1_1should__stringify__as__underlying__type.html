@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Anton-Gera_Project_2sem: Шаблон структуры doctest::detail::should_stringify_as_underlying_type&lt; T &gt;</title>
+<title>Anton-Gera_CppProject_2sem: Шаблон структуры doctest::detail::should_stringify_as_underlying_type&lt; T &gt;</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,8 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Anton-Gera_Project_2sem
+   <div id="projectname">Anton-Gera_CppProject_2sem
    </div>
+   <div id="projectbrief">Реализация некоторых исторических криптографических шифров</div>
   </td>
  </tr>
  </tbody>
@@ -96,7 +97,7 @@ $(function(){initNavTree('structdoctest_1_1detail_1_1should__stringify__as__unde
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Статические открытые данные</h2></td></tr>
-<tr class="memitem:a0115e8b2c73fe1a0fc9f344a1374e2dd" id="r_a0115e8b2c73fe1a0fc9f344a1374e2dd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="doctest_8h.html#ab684ad408ff2382098779e3cd58bd549">DOCTEST_CONSTEXPR</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0115e8b2c73fe1a0fc9f344a1374e2dd">value</a> = <a class="el" href="structdoctest_1_1detail_1_1types_1_1is__enum.html">detail::types::is_enum</a>&lt;T&gt;::value &amp;&amp; !<a class="el" href="structdoctest_1_1detail_1_1has__insertion__operator.html">doctest::detail::has_insertion_operator</a>&lt;T&gt;::value</td></tr>
+<tr class="memitem:a0115e8b2c73fe1a0fc9f344a1374e2dd" id="r_a0115e8b2c73fe1a0fc9f344a1374e2dd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="doctest_8h.html#ab684ad408ff2382098779e3cd58bd549">DOCTEST_CONSTEXPR</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0115e8b2c73fe1a0fc9f344a1374e2dd">value</a></td></tr>
 </table>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
 <a id="a0115e8b2c73fe1a0fc9f344a1374e2dd" name="a0115e8b2c73fe1a0fc9f344a1374e2dd"></a>
@@ -111,7 +112,7 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="doctest_8h.html#ab684ad408ff2382098779e3cd58bd549">DOCTEST_CONSTEXPR</a> bool <a class="el" href="structdoctest_1_1detail_1_1should__stringify__as__underlying__type.html">doctest::detail::should_stringify_as_underlying_type</a>&lt; T &gt;::value = <a class="el" href="structdoctest_1_1detail_1_1types_1_1is__enum.html">detail::types::is_enum</a>&lt;T&gt;::value &amp;&amp; !<a class="el" href="structdoctest_1_1detail_1_1has__insertion__operator.html">doctest::detail::has_insertion_operator</a>&lt;T&gt;::value</td>
+          <td class="memname"><a class="el" href="doctest_8h.html#ab684ad408ff2382098779e3cd58bd549">DOCTEST_CONSTEXPR</a> bool <a class="el" href="structdoctest_1_1detail_1_1should__stringify__as__underlying__type.html">doctest::detail::should_stringify_as_underlying_type</a>&lt; T &gt;::value</td>
         </tr>
       </table>
   </td>
@@ -120,7 +121,12 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<b>Инициализатор</b><div class="fragment"><div class="line">=</div>
+<div class="line">      <a class="code hl_variable" href="structdoctest_1_1detail_1_1types_1_1is__enum.html#a2ac322024808b91cda5ce1a42691ee07">detail::types::is_enum&lt;T&gt;::value</a> &amp;&amp;</div>
+<div class="line">      !<a class="code hl_variable" href="structdoctest_1_1detail_1_1types_1_1false__type.html#a8580f67f4b223b10e49d93b959767f6d">doctest::detail::has_insertion_operator&lt;T&gt;::value</a></div>
+<div class="ttc" id="astructdoctest_1_1detail_1_1types_1_1false__type_html_a8580f67f4b223b10e49d93b959767f6d"><div class="ttname"><a href="structdoctest_1_1detail_1_1types_1_1false__type.html#a8580f67f4b223b10e49d93b959767f6d">doctest::detail::types::false_type::value</a></div><div class="ttdeci">static DOCTEST_CONSTEXPR bool value</div><div class="ttdef"><b>Определения</b> doctest.h:1045</div></div>
+<div class="ttc" id="astructdoctest_1_1detail_1_1types_1_1is__enum_html_a2ac322024808b91cda5ce1a42691ee07"><div class="ttname"><a href="structdoctest_1_1detail_1_1types_1_1is__enum.html#a2ac322024808b91cda5ce1a42691ee07">doctest::detail::types::is_enum::value</a></div><div class="ttdeci">static DOCTEST_CONSTEXPR bool value</div><div class="ttdef"><b>Определения</b> doctest.h:1070</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>Объявления и описания членов структуры находятся в файле:<ul>

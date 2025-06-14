@@ -31,6 +31,7 @@ var hierarchy =
     [ "doctest::detail::filldata< const void * >", "structdoctest_1_1detail_1_1filldata_3_01const_01void_01_5_01_4.html", null ],
     [ "doctest::detail::filldata< T * >", "structdoctest_1_1detail_1_1filldata_3_01_t_01_5_01_4.html", null ],
     [ "doctest::detail::filldata< T[N]>", "structdoctest_1_1detail_1_1filldata_3_01_t_0f_n_0e_4.html", null ],
+    [ "HillCipher", "class_hill_cipher.html", null ],
     [ "doctest::IContextScope", "structdoctest_1_1_i_context_scope.html", [
       [ "doctest::detail::ContextScopeBase", "structdoctest_1_1detail_1_1_context_scope_base.html", [
         [ "doctest::detail::ContextScope< L >", "classdoctest_1_1detail_1_1_context_scope.html", null ]
@@ -54,6 +55,7 @@ var hierarchy =
     [ "doctest::detail::types::remove_reference< T && >", "structdoctest_1_1detail_1_1types_1_1remove__reference_3_01_t_01_6_6_01_4.html", null ],
     [ "doctest::detail::Result", "structdoctest_1_1detail_1_1_result.html", null ],
     [ "doctest::detail::should_stringify_as_underlying_type< T >", "structdoctest_1_1detail_1_1should__stringify__as__underlying__type.html", null ],
+    [ "SimpleSubstitution", "class_simple_substitution.html", null ],
     [ "doctest::String", "classdoctest_1_1_string.html", null ],
     [ "doctest::AssertData::StringContains", "classdoctest_1_1_assert_data_1_1_string_contains.html", null ],
     [ "doctest::detail::StringMakerBase< C >", "structdoctest_1_1detail_1_1_string_maker_base.html", null ],
@@ -77,5 +79,6 @@ var hierarchy =
       [ "doctest::detail::types::is_rvalue_reference< T && >", "structdoctest_1_1detail_1_1types_1_1is__rvalue__reference_3_01_t_01_6_6_01_4.html", null ]
     ] ],
     [ "std::tuple< Types >", "classstd_1_1tuple.html", null ],
-    [ "doctest::detail::types::underlying_type< T >", "structdoctest_1_1detail_1_1types_1_1underlying__type.html", null ]
+    [ "doctest::detail::types::underlying_type< T >", "structdoctest_1_1detail_1_1types_1_1underlying__type.html", null ],
+    [ "VernamCipher", "class_vernam_cipher.html", null ]
 ];

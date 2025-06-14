@@ -116,7 +116,7 @@ var namespacedoctest =
     [ "TestCaseData", "structdoctest_1_1_test_case_data.html", "structdoctest_1_1_test_case_data" ],
     [ "TestCaseException", "structdoctest_1_1_test_case_exception.html", "structdoctest_1_1_test_case_exception" ],
     [ "TestRunStats", "structdoctest_1_1_test_run_stats.html", "structdoctest_1_1_test_run_stats" ],
-    [ "size_t", "namespacedoctest.html#a2a88bc267d8fe2228f9ef18e79d79268", null ],
+    [ "size_t", "namespacedoctest.html#a1ada4110a09572b70659f08d6eb27c17", null ],
     [ "assertString", "namespacedoctest.html#a44bf1260a82383247d446170810493cf", null ],
     [ "DOCTEST_DEFINE_DECORATOR", "namespacedoctest.html#a07f4a26e2b7cce41abb7d71124951792", null ],
     [ "DOCTEST_DEFINE_DECORATOR", "namespacedoctest.html#ab1678966da9d93629130f083220403da", null ],

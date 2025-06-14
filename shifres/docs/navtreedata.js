@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "Anton-Gera_Project_2sem", "index.html", [
+  [ "Anton-Gera_CppProject_2sem", "index.html", [
     [ "Пространства имен", "namespaces.html", [
       [ "Пространства имен", "namespaces.html", "namespaces_dup" ],
       [ "Члены пространств имен", "namespacemembers.html", [
@@ -53,6 +53,7 @@ var NAVTREE =
       [ "Список членов всех файлов", "globals.html", [
         [ "Указатель", "globals.html", "globals_dup" ],
         [ "Функции", "globals_func.html", null ],
+        [ "Переменные", "globals_vars.html", null ],
         [ "Макросы", "globals_defs.html", "globals_defs" ]
       ] ]
     ] ]
@@ -62,11 +63,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_affin___shifr_8h.html",
-"doctest_8h.html#a478c7f3eb127a7edbcc8577154deebba",
-"doctest_8h.html#afa2574c40fccb542361e0a95ac6c1ea5",
-"namespacedoctest_1_1detail_1_1assert_action.html#a38ba820518d42da988fab24b2f3d0548aad8b44f340e17ab74bf8386e63b25191",
-"structdoctest_1_1_subcase_signature.html#a4d973585305ed44c0f1436cd268ec678",
-"structdoctest_1_1detail_1_1has__insertion__operator_3_01_t_00_01decltype_07operator_3_3_07declvab094f732977dc5a8a6181e0b8269a776.html"
+"doctest_8h.html#a14d41f3ce8df5419a66ac0c8bdf33b0d",
+"doctest_8h.html#abeeedde24675295715ea07fa2f9ed875",
+"namespacedoctest_1_1assert_type.html#ae1bb5bed722f34f1c38b83cb19d326d3a4431fd22794b06d854c7f9fbf43b10b8",
+"structdoctest_1_1_current_test_case_stats.html#a29b1963f1d624d9f939f404726298f48",
+"structdoctest_1_1detail_1_1_subcase.html#a9e0ce38b3c110677a9188ba130a946f5"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

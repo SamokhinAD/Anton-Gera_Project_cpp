@@ -70,5 +70,8 @@ var annotated_dup =
       [ "basic_ostream", "classstd_1_1basic__ostream.html", null ],
       [ "char_traits", "structstd_1_1char__traits.html", null ],
       [ "tuple", "classstd_1_1tuple.html", null ]
-    ] ]
+    ] ],
+    [ "HillCipher", "class_hill_cipher.html", "class_hill_cipher" ],
+    [ "SimpleSubstitution", "class_simple_substitution.html", "class_simple_substitution" ],
+    [ "VernamCipher", "class_vernam_cipher.html", "class_vernam_cipher" ]
 ];

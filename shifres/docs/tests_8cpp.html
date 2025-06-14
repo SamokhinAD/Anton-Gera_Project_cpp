@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Anton-Gera_Project_2sem: Файл tests.cpp</title>
+<title>Anton-Gera_CppProject_2sem: Файл tests.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,8 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Anton-Gera_Project_2sem
+   <div id="projectname">Anton-Gera_CppProject_2sem
    </div>
+   <div id="projectbrief">Реализация некоторых исторических криптографических шифров</div>
   </td>
  </tr>
  </tbody>
@@ -91,10 +92,13 @@ $(function(){initNavTree('tests_8cpp.html','',''); });
   <div class="headertitle"><div class="title">Файл tests.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="doctest_8h_source.html">doctest.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_affin___shifr_8h_source.html">Affin_Shifr.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="_affin___shifr_8h_source.html">Affin_Shifr.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_hill_8h_source.html">Hill.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_r_s_a_8h_source.html">RSA.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_simple__sub_8h_source.html">Simple_sub.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_vernam_8h_source.html">Vernam.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_vij_8h_source.html">Vij.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="doctest_8h_source.html">doctest.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Макросы</h2></td></tr>
@@ -108,6 +112,12 @@ $(function(){initNavTree('tests_8cpp.html','',''); });
 <tr class="memdesc:a92b39864d69957ca3c82518ba4535f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тестирование шифра Виженера  <br /></td></tr>
 <tr class="memitem:a368cd276f4b7de53f74344323cf3e87d" id="r_a368cd276f4b7de53f74344323cf3e87d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a368cd276f4b7de53f74344323cf3e87d">TEST_CASE</a> (&quot;Testing RSA functions&quot;)</td></tr>
 <tr class="memdesc:a368cd276f4b7de53f74344323cf3e87d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тестирование RSA шифрования  <br /></td></tr>
+<tr class="memitem:a3a40827eb73ec904e2066ae8f32a5d05" id="r_a3a40827eb73ec904e2066ae8f32a5d05"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a40827eb73ec904e2066ae8f32a5d05">TEST_CASE</a> (&quot;Testing <a class="el" href="class_simple_substitution.html">SimpleSubstitution</a> functions&quot;)</td></tr>
+<tr class="memdesc:a3a40827eb73ec904e2066ae8f32a5d05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тестирование простой замены  <br /></td></tr>
+<tr class="memitem:a0aac3ab257fb62a3eb7a963761181005" id="r_a0aac3ab257fb62a3eb7a963761181005"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0aac3ab257fb62a3eb7a963761181005">TEST_CASE</a> (&quot;Testing <a class="el" href="class_hill_cipher.html">HillCipher</a> functions&quot;)</td></tr>
+<tr class="memdesc:a0aac3ab257fb62a3eb7a963761181005"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тестирование шифра Хилла  <br /></td></tr>
+<tr class="memitem:abf58739d0b4809176c5ef0fe1ac3a8f6" id="r_abf58739d0b4809176c5ef0fe1ac3a8f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf58739d0b4809176c5ef0fe1ac3a8f6">TEST_CASE</a> (&quot;Testing <a class="el" href="class_vernam_cipher.html">VernamCipher</a> functions&quot;)</td></tr>
+<tr class="memdesc:abf58739d0b4809176c5ef0fe1ac3a8f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тестирование шифра Вернама  <br /></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Макросы</h2>
 <a id="a623b8690a262536536a43eab2d7df03d" name="a623b8690a262536536a43eab2d7df03d"></a>
@@ -126,7 +136,7 @@ $(function(){initNavTree('tests_8cpp.html','',''); });
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
 <a id="ad6c3bee433962aec29a305e67c184493" name="ad6c3bee433962aec29a305e67c184493"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6c3bee433962aec29a305e67c184493">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6c3bee433962aec29a305e67c184493">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -147,12 +157,39 @@ $(function(){initNavTree('tests_8cpp.html','',''); });
 <li>Убеждаемся, что получили исходный текст </li>
 </ul>
 <p>Проверка шифрования: "hello world" должно стать "qbjjydkymjx"</p>
-<p>Проверка расшифрования: "qbjjydkymjx" должно вернуться к "hello world"</p>
+<p>Проверка расшифрования: "qbjjydkymjx" должно вернуться к "hello
+world"</p>
+
+</div>
+</div>
+<a id="a0aac3ab257fb62a3eb7a963761181005" name="a0aac3ab257fb62a3eb7a963761181005"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0aac3ab257fb62a3eb7a963761181005">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Testing <a class="el" href="class_hill_cipher.html">HillCipher</a> functions&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тестирование шифра Хилла </p>
+<p>Проверяем работу шифра Хилла с матрицей [[5, 8], [17, 3]]:</p><ul>
+<li>Шифруем слово "test"</li>
+<li>Расшифровываем результат обратно</li>
+<li>Убеждаемся в корректности преобразований </li>
+</ul>
+<p>Проверка шифрования: "test" должно стать "qkiz"</p>
+<p>Проверка расшифрования: "qkiz" должно вернуться к "test"</p>
 
 </div>
 </div>
 <a id="a368cd276f4b7de53f74344323cf3e87d" name="a368cd276f4b7de53f74344323cf3e87d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a368cd276f4b7de53f74344323cf3e87d">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a368cd276f4b7de53f74344323cf3e87d">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,8 +214,59 @@ $(function(){initNavTree('tests_8cpp.html','',''); });
 
 </div>
 </div>
+<a id="a3a40827eb73ec904e2066ae8f32a5d05" name="a3a40827eb73ec904e2066ae8f32a5d05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a40827eb73ec904e2066ae8f32a5d05">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Testing <a class="el" href="class_simple_substitution.html">SimpleSubstitution</a> functions&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тестирование простой замены </p>
+<p>Проверяем работу шифра простой замены с алфавитом "qwertyuiopasdfghjklzxcvbnm":</p><ul>
+<li>Шифруем слово "hello"</li>
+<li>Расшифровываем результат обратно</li>
+<li>Проверяем корректность работы алгоритма </li>
+</ul>
+<p>Проверка шифрования: "hello" должно стать "itssg"</p>
+<p>Проверка расшифрования: "itssg" должно вернуться к "hello"</p>
+
+</div>
+</div>
+<a id="abf58739d0b4809176c5ef0fe1ac3a8f6" name="abf58739d0b4809176c5ef0fe1ac3a8f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf58739d0b4809176c5ef0fe1ac3a8f6">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Testing <a class="el" href="class_vernam_cipher.html">VernamCipher</a> functions&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тестирование шифра Вернама </p>
+<p>Проверяем работу шифра Вернама с ключом "secret":</p><ul>
+<li>Шифруем слово "test"</li>
+<li>Расшифровываем полученный результат</li>
+<li>Проверяем совпадение с исходным текстом </li>
+</ul>
+<p>Проверка полного цикла шифрования-дешифрования</p>
+
+</div>
+</div>
 <a id="a92b39864d69957ca3c82518ba4535f6e" name="a92b39864d69957ca3c82518ba4535f6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92b39864d69957ca3c82518ba4535f6e">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a92b39864d69957ca3c82518ba4535f6e">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

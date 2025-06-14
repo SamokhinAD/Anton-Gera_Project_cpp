@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Anton-Gera_Project_2sem: Файл main.cpp</title>
+<title>Anton-Gera_CppProject_2sem: Файл main.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,8 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Anton-Gera_Project_2sem
+   <div id="projectname">Anton-Gera_CppProject_2sem
    </div>
+   <div id="projectbrief">Реализация некоторых исторических криптографических шифров</div>
   </td>
  </tr>
  </tbody>
@@ -94,12 +95,15 @@ $(function(){initNavTree('main_8cpp.html','',''); });
 
 <p>Главная программа для работы с различными шифрами  
 <a href="#details">Подробнее...</a></p>
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;limits&gt;</code><br />
-<code>#include &lt;conio.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="_affin___shifr_8h_source.html">Affin_Shifr.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_vij_8h_source.html">Vij.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="_affin___shifr_8h_source.html">Affin_Shifr.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_hill_8h_source.html">Hill.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_r_s_a_8h_source.html">RSA.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_simple__sub_8h_source.html">Simple_sub.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_vernam_8h_source.html">Vernam.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_vij_8h_source.html">Vij.h</a>&quot;</code><br />
+<code>#include &lt;conio.h&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
@@ -129,17 +133,13 @@ $(function(){initNavTree('main_8cpp.html','',''); });
 <dl class="section return"><dt>Возвращает</dt><dd>0 при успешном завершении программы</dd></dl>
 <p>Показывает меню выбора шифров и ждёт нажатия клавиш:</p><ul>
 <li>1: запускает аффинный шифр</li>
-<li>2: запускает шифр Виженера <br  />
-</li>
+<li>2: запускает шифр Виженера</li>
 <li>3: запускает RSA</li>
+<li>4: запускает шифр простой замены</li>
+<li>5: запускает шифр Хилла</li>
+<li>6: запускает шифр Вернама</li>
 <li>Esc: выход из программы </li>
 </ul>
-<p>Флаг для отслеживания первого нажатия клавиши (чтобы не реагировать на повторные)</p>
-<p>Код нажатой клавиши</p>
-<p>Выход из программы при нажатии Esc (код 27)</p>
-<p>Запуск аффинного шифра при нажатии '1' (код 49)</p>
-<p>Запуск шифра Виженера при нажатии '2' (код 50)</p>
-<p>Запуск RSA при нажатии '3' (код 51)</p>
 
 </div>
 </div>

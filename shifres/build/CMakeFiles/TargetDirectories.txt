@@ -1,0 +1,6 @@
+D:/AiP/project_cpp_2sem/shifres/build/CMakeFiles/main.dir
+D:/AiP/project_cpp_2sem/shifres/build/CMakeFiles/tests.dir
+D:/AiP/project_cpp_2sem/shifres/build/CMakeFiles/run_tests.dir
+D:/AiP/project_cpp_2sem/shifres/build/CMakeFiles/test.dir
+D:/AiP/project_cpp_2sem/shifres/build/CMakeFiles/edit_cache.dir
+D:/AiP/project_cpp_2sem/shifres/build/CMakeFiles/rebuild_cache.dir
