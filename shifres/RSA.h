@@ -70,7 +70,7 @@ long long stepen(long long base, long long exp, long long mod) {
  *          приватный (n,d) для расшифрования. Безопасность основана на том,
  *          что сложно найти d, зная только n и e
  */
-int main_RSA(string key, int e, int text, int mod) {
+int main_RSA(string key_vvod, int e_vvod, int text_vvod, int mod) {
   setlocale(LC_ALL, "en_US.UTF-8");
   cout << "\nПравила выбора параметров для использования алгоритма:" << endl;
   cout << "1. Ключ вводится как пара простых чисел одинаковой размерности - "
@@ -87,10 +87,12 @@ int main_RSA(string key, int e, int text, int mod) {
 
   try {
     cout << "\nВведите ключи шифрования - два простых числа:" << endl;
-    if (key == "-1") {
-      /** @brief Ключи, введенные пользователем */
-      string key;
+    /** @brief Ключи, введенные пользователем */
+    string key;
+    if (key_vvod == "-1") {
       getline(cin, key);
+    } else {
+      key = key_vvod;
     }
 
     /** @brief Позиция пробела между двумя простыми числами */
@@ -110,11 +112,13 @@ int main_RSA(string key, int e, int text, int mod) {
     cout << "\nВведите открытую экспоненту - число от 1 до " +
                 std::to_string(f_n) + ":"
          << endl;
-    if (e == -1) {
+    int e;
+    if (e_vvod == -1) {
       /** @brief Открытая экспонента, введенная пользователем */
-      int e;
       cin >> e;
       cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    } else {
+      e = e_vvod;
     }
     /** @brief Секретная экспонента - обратная к e по модулю f_n */
     int d;
@@ -134,11 +138,11 @@ int main_RSA(string key, int e, int text, int mod) {
           cout << "\nВведите открытый текст:" << endl;
           /** @brief Исходное число для шифрования */
           int open_text;
-          if (text == -1) {
+          if (text_vvod == -1) {
             cin >> open_text;
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
           } else {
-            open_text = text;
+            open_text = text_vvod;
           }
 
           /** @brief Зашифрованное число */
@@ -153,11 +157,11 @@ int main_RSA(string key, int e, int text, int mod) {
           cout << "\nВведите шифр-сообщение:" << endl;
           /** @brief Зашифрованное число для расшифрования */
           int shifr;
-          if (text == -1) {
+          if (text_vvod == -1) {
             cin >> shifr;
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
           } else {
-            shifr = text;
+            shifr = text_vvod;
           }
 
           /** @brief Расшифрованное исходное число */

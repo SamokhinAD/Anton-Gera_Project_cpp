@@ -1,10 +1,10 @@
-Start testing: Jun 14 10:22 RTZ 2 (çèìà)
+Start testing: Jun 14 11:28 RTZ 2 (çèìà)
 ----------------------------------------------------------
 1/1 Testing: all_tests
 1/1 Test: all_tests
 Command: "D:/AiP/project_cpp_2sem/shifres/build/tests.exe"
 Directory: D:/AiP/project_cpp_2sem/shifres/build
-"all_tests" start time: Jun 14 10:22 RTZ 2 (çèìà)
+"all_tests" start time: Jun 14 11:28 RTZ 2 (çèìà)
 Output:
 ----------------------------------------------------------
 [doctest] doctest version is "2.4.12"
@@ -122,11 +122,11 @@ helloworld
 [doctest] assertions: 11 | 11 passed | 0 failed |
 [doctest] Status: SUCCESS!
 <end of output>
-Test time =   0.04 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
 Test Passed.
-"all_tests" end time: Jun 14 10:22 RTZ 2 (çèìà)
+"all_tests" end time: Jun 14 11:28 RTZ 2 (çèìà)
 "all_tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jun 14 10:22 RTZ 2 (çèìà)
+End testing: Jun 14 11:28 RTZ 2 (çèìà)

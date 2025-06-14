@@ -30,7 +30,8 @@ using namespace std;
  * складывается с соответствующей буквой ключа (для шифрования) или вычитается
  * (для расшифрования)
  */
-string main_Vij(string alphabet, string key_text, string text, int mod) {
+string main_Vij(string alphabet_vvod, string key_text_vvod, string text_vvod,
+                int mod) {
   setlocale(LC_ALL, "en_US.UTF-8");
   cout << "\nПравила выбора параметров для использования алгоритма:" << endl;
   cout << "1. Алфавит может состоять из любого количества любых символов;"
@@ -47,19 +48,23 @@ string main_Vij(string alphabet, string key_text, string text, int mod) {
 
   cout << "\nВведите алфавит для проведения криптографических операций:"
        << endl;
-  if (alphabet == "-1") {
+  string alphabet;
+  if (alphabet_vvod == "-1") {
     /** @brief Алфавит, введенный пользователем */
-    string alphabet;
     getline(cin, alphabet);
+  } else {
+    alphabet = alphabet_vvod;
   }
   /** @brief Размер алфавита - сколько всего символов можно использовать */
   int m = alphabet.length();
 
   cout << "\nВведите ключ шифрования:" << endl;
-  if (key_text == "-1") {
+  string key_text;
+  if (key_text_vvod == "-1") {
     /** @brief Ключевое слово, введенное пользователем */
-    string key_text;
     getline(cin, key_text);
+  } else {
+    key_text = key_text_vvod;
   }
   /** @brief Длина ключевого слова */
   int len_key_text = key_text.length();
@@ -78,10 +83,10 @@ string main_Vij(string alphabet, string key_text, string text, int mod) {
         cout << "\nВведите открытый текст:" << endl;
         /** @brief Текст, который нужно зашифровать */
         string open_text;
-        if (text == "-1") {
+        if (text_vvod == "-1") {
           getline(cin, open_text);
         } else {
-          open_text = text;
+          open_text = text_vvod;
         }
 
         for (auto &c : open_text) {
@@ -118,10 +123,10 @@ string main_Vij(string alphabet, string key_text, string text, int mod) {
         cout << "\nВведите шифртекст:" << endl;
         /** @brief Зашифрованный текст, который нужно расшифровать */
         string shifr_text;
-        if (text == "-1") {
+        if (text_vvod == "-1") {
           getline(cin, shifr_text);
         } else {
-          shifr_text = text;
+          shifr_text = text_vvod;
         }
         /** @brief Длина зашифрованного текста */
         int len_shifr_text = shifr_text.length();

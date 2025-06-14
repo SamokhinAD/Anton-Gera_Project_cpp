@@ -47,7 +47,8 @@ int mod_inv(int a, int m) {
  *          - Расшифрование: D(y) = ((y - b) * a^(-1)) mod m
  *          где a, b - ключи шифрования, m - размер алфавита
  */
-string main_Aff(string alphabet, string key, string text, int mod) {
+string main_Aff(string alphabet_vvod, string key_vvod, string text_vvod,
+                int mod) {
   setlocale(LC_ALL, "en_US.UTF-8");
   cout << "\nПравила выбора параметров для использования алгоритма:" << endl;
   cout << "1. Алфавит может состоять из любого количества любых символов;"
@@ -65,19 +66,23 @@ string main_Aff(string alphabet, string key, string text, int mod) {
   try {
     cout << "\nВведите алфавит для проведения криптографических операций:"
          << endl;
-    if (alphabet == "-1") {
+    string alphabet;
+    if (alphabet_vvod == "-1") {
       /** @brief Локальная переменная для хранения введенного алфавита */
-      string alphabet;
       getline(cin, alphabet);
+    } else {
+      alphabet = alphabet_vvod;
     }
     /** @brief Размер алфавита (модуль для аффинного шифра) */
     int m = alphabet.length();
 
     cout << "\nВведите ключи шифрования:" << endl;
-    if (key == "-1") {
+    string key;
+    if (key_vvod == "-1") {
       /** @brief Локальная переменная для хранения введенного ключа */
-      string key;
       getline(cin, key);
+    } else {
+      key = key_vvod;
     }
 
     /** @brief Позиция пробела в строке ключа для разделения параметров a и b */
@@ -104,10 +109,10 @@ string main_Aff(string alphabet, string key, string text, int mod) {
           cout << "\nВведите открытый текст:" << endl;
           /** @brief Открытый текст для шифрования */
           string open_text;
-          if (text == "-1") {
+          if (text_vvod == "-1") {
             getline(cin, open_text);
           } else {
-            open_text = text;
+            open_text = text_vvod;
           }
 
           for (auto &c : open_text) {
@@ -136,10 +141,10 @@ string main_Aff(string alphabet, string key, string text, int mod) {
           cout << "\nВведите шифртекст:" << endl;
           /** @brief Зашифрованный текст для расшифрования */
           string shifr_text;
-          if (text == "-1") {
+          if (text_vvod == "-1") {
             getline(cin, shifr_text);
           } else {
-            shifr_text = text;
+            shifr_text = text_vvod;
           }
 
           for (auto &c : shifr_text) {
